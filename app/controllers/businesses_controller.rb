@@ -24,7 +24,7 @@ class BusinessesController < ApplicationController
         }
       end
     else 
-      render status: 200, json: {
+      render status: 400, json: {
         message: "Your request did not include any data to update. Try again."
       }
     end
