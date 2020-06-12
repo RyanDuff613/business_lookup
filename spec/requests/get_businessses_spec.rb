@@ -14,9 +14,10 @@ describe "get all businesses route", :type => :request do
 end
 
 describe "get businesses by id route", :type => :request do
+ 
   before do
-    post '/businesses', params: {:name => "Hotlips Pizza", :business_type => 'pizza', :phone => '555.555.5555', :address => '2121 SE Hawthorne blvd', :website => "http://www.hotlipspizza.com"}
-    get '/businesses'
+    FactoryBot.create(:business)
+    get '/businesses/', params: {:name => 'Hotlips Pizza', :business_type => 'Restaurant', :phone => '503 234 9999', :address => '2211 SE Hawthorne Blvd, Portland OR, 97214', :website => 'https://www.hotlipspizza.com/'}
   end
 
   it "returns a single business object" do
