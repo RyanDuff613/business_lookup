@@ -17,9 +17,15 @@ class BusinessesController < ApplicationController
 
   def update
     @business = Business.find(params[:id])
-    if @business.update!(business_params)
+    if params[:name] || params[:business_type] || params[:phone] || params[:address] || params[:website]
+      if @business.update!(business_params)
+        render status: 200, json: {
+          message: "#{@business.name} was succesfully updated"
+        }
+      end
+    else 
       render status: 200, json: {
-        message: "#{@business.name} was succesfully updated"
+        message: "Your request did not include any data to update. Try again."
       }
     end
   end
