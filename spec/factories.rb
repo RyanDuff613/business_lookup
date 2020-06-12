@@ -4,6 +4,6 @@ FactoryBot.define do
     business_type {'Restaurant'}
     phone {'503 234 9999'}
     website {'https://www.hotlipspizza.com/'}
-    addresss { '2211 SE Hawthorne Blvd, Portland OR, 97214'}
+    address { '2211 SE Hawthorne Blvd, Portland OR, 97214'}
   end
 end
