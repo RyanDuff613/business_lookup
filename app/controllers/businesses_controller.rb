@@ -17,7 +17,7 @@ class BusinessesController < ApplicationController
 
   def update
     @business = Business.find(params[:id])
-    @business.update(business_params)
+    @business.update!(business_params)
   end
 
   def destroy
