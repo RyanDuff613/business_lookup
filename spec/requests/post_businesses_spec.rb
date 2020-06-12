@@ -19,7 +19,7 @@ describe "post a business route error", :type => :request do
     post '/businesses', params: {:name => nil, :business_type => 'Restaurant', :phone => '503 234 9999', :address => '2211 SE Hawthorne Blvd, Portland OR, 97214', :website => 'https://www.hotlipspizza.com/'}
   end
 
-  it "returns an error message" do
+  it "returns an error message if user has failed to enter a parameter" do
     expect(JSON.parse(response.body)).to(eq({"message"=>"Validation failed: Name can't be blank"}))
   end
 
