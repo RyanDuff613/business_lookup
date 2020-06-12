@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "post a business route", :type => :request do
+describe "put a business route", :type => :request do
   before do
     post '/businesses', params: {:name => 'Hotlips Pizza', :business_type => 'Restaurant', :phone => '503 234 9999', :address => '2211 SE Hawthorne Blvd, Portland OR, 97214', :website => 'https://www.hotlipspizza.com/'}
     @business_id = JSON.parse(response.body)['id']
@@ -23,7 +23,7 @@ end
 
 
 
-describe "post a business route errors", :type => :request do
+describe "put a business route errors", :type => :request do
   before do
     post '/businesses', params: {:name => 'Hotlips Pizza', :business_type => 'Restaurant', :phone => '503 234 9999', :address => '2211 SE Hawthorne Blvd, Portland OR, 97214', :website => 'https://www.hotlipspizza.com/'}
     @business_id = JSON.parse(response.body)['id']
