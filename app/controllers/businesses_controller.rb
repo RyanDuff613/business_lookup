@@ -39,12 +39,11 @@ class BusinessesController < ApplicationController
     end
   end
 
-  def search(params)
+  def search
       @businesses = Business.search(params)
       json_response(@businesses)
   end
 
-  
 
   private
   def business_params
