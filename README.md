@@ -24,12 +24,27 @@ Now open a web browser and enter localhost:3000 in the address bar to view the p
 
 ## Specifications
 
-| Behavior       | Input         | Output  |
+| Action       | Endpoint | Result |
 | :--- |:---| :---|
-||||
+|GET| localhost:3000/| List of all businesse in the database|
+|GET | localhost:3000/businesses| List of all businesse in the database|
+|GET | localhost:3000/businesses/id| All information related to business of a given ID|
+|GET | localhost:3000/businesses?name=[search_params]| All information related to business of a given name|
+|GET | localhost:3000/businesses?business_type=[search_params]| All information related to business of a given type|
+|POST||Post a new business to add to database|
+|PUT/PATCH|Update the information stored for a given business|
+|DELETE||Delete the entire record for a given business|
+
+
 ## User Stories Employed to Determine Behavior Driven Development Strategy
 
-* As a user I want to 
+* As a user I want to be able to see a list of businesses that includes the business name, website, phone number, address and business type.
+* As a user I want to be able to search for a business by name.
+* As a user I want to be able to search for all businesses by business type.
+* As a user I want to be able to recieve a the information of a random business
+* As a user I want to be able to add a business or delete an existing business
+* As a user I want to be able to update information for an existing business.
+
 
 ## Technologies Used
 * _Ruby_
