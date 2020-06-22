@@ -45,6 +45,11 @@ class BusinessesController < ApplicationController
       json_response(@businesses)
   end
 
+  def random
+    @business = Business.order("RANDOM()").first 
+    json_response(@business)
+  end
+
 
   private
   def business_params
