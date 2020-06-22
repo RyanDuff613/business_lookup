@@ -1,5 +1,6 @@
 class BusinessesController < ApplicationController
 
+
   def index
     @businesses = Business.all 
     json_response(@businesses)
@@ -49,5 +50,7 @@ class BusinessesController < ApplicationController
   def business_params
     params.permit(:name, :business_type, :phone, :address, :website)
   end
+
+  
 
 end

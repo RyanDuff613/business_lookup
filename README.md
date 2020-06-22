@@ -29,11 +29,11 @@ Now open a web browser and enter localhost:3000 in the address bar to view the p
 |GET| localhost:3000/| List of all businesse in the database|
 |GET | localhost:3000/businesses| List of all businesse in the database|
 |GET | localhost:3000/businesses/id| All information related to business of a given ID|
-|GET | localhost:3000/businesses?name=[search_params]| All information related to business of a given name|
-|GET | localhost:3000/businesses?business_type=[search_params]| All information related to business of a given type|
-|POST||Post a new business to add to database|
-|PUT/PATCH|Update the information stored for a given business|
-|DELETE|localhost:3000/business?id=[business id]|Delete the entire record for a given business|
+|GET | http://localhost:3000/businesses/search/?name=Hotlips| All information related to "Hotlips"|
+|GET | http://localhost:3000/businesses/search/?business_type=Kids| All businesses related to "Kids"|
+|POST|http://localhost:3000/businesses/?name=hotlips&business_type=pizza&website=www.hotlipspizza.com&phone=444.444.4444&address=234 ne oerjo|Record for Hotlips is added to the database|
+|PUT/PATCH|http://localhost:3000/businesses/38?phone=777.777.7777|Update the information stored for a given business|
+|DELETE|http://localhost:3000/businesses/38|Delete the entire record for a given business|
 
 
 ## User Stories Employed to Determine Behavior Driven Development Strategy
