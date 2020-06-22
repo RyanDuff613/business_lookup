@@ -24,16 +24,18 @@ Now open a web browser and enter localhost:3000 in the address bar to view the p
 
 ## Specifications
 
-| Action       | Endpoint | Result |
+| Method       | Endpoint | Result |
 | :--- |:---| :---|
 |GET| localhost:3000/| List of all businesse in the database|
 |GET | localhost:3000/businesses| List of all businesse in the database|
 |GET | localhost:3000/businesses/id| All information related to business of a given ID|
 |GET | http://localhost:3000/businesses/search/?name=Hotlips| All information related to "Hotlips"|
 |GET | http://localhost:3000/businesses/search/?business_type=Kids| All businesses related to "Kids"|
+|GET|http://localhost:3000/businesses/random|Listing for a random business in the database|
 |POST|http://localhost:3000/businesses/?name=hotlips&business_type=pizza&website=www.hotlipspizza.com&phone=444.444.4444&address=234 ne oerjo|Record for Hotlips is added to the database|
 |PUT/PATCH|http://localhost:3000/businesses/38?phone=777.777.7777|Update the information stored for a given business|
 |DELETE|http://localhost:3000/businesses/38|Delete the entire record for a given business|
+
 
 
 ## User Stories Employed to Determine Behavior Driven Development Strategy
