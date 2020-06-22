@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::API
   include Response
+  use Rack::Throttle::Daily, :max => 1000
+  use Rack::Throttle::Hourly, :max => 300
+  use Rack::Throttle::Minute, :max => 20
 
   rescue_from ActiveRecord::RecordNotFound do |exception|
     json_response({ message: exception.message }, :not_found)

@@ -14,6 +14,10 @@ require "action_cable/engine"
 # require "rails/test_unit/railtie"
 require 'rack/throttle'
 
+class Application < Rails::Application
+  config.middleware.use Rack::Throttle::Interval
+end
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
@@ -32,6 +36,5 @@ module BusinessLookup
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
-    config.middleware.use Rack::Throttle::Minute, :max => 1
   end
 end
