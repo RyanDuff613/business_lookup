@@ -39,15 +39,12 @@ class BusinessesController < ApplicationController
     end
   end
 
-  def search
-    if params[:name]
-      @businesses = Businesses.search(name)
+  def search(params)
+      @businesses = Business.search(params)
       json_response(@businesses)
-    elsif params[:business_type]
-      @businesses = Businesses.search(name)
-      json_response(@businesses)
-    end
   end
+
+  
 
   private
   def business_params

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :businesses
+  resources :businesses do
+  end
   match '*path', :to => 'application#routing_error', via: [:post]
-  get "/businesses/search"
+  get "/search" => 'businesses#search'
+  
 end

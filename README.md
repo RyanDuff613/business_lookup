@@ -45,12 +45,6 @@ Now open a web browser and enter localhost:3000 in the address bar to view the p
 
 ## Known Bugs
 
-If user enters a product cost with a "0" in the hundrenths position, the "0" is dropped from the cost. 
-Ex. User Entered Cost:$2.30, Cost in Database: $2.3
-
-Applicaation does not test for vilidity of user inputted email addresses and does not restrict for password strength.
-
-Application limits certain actions to "Admins" but currently allows any user to create an Admin account.
 
 ### License
 
