@@ -9,9 +9,9 @@ class ApplicationController < ActionController::API
     json_response({ message: exception.message }, :unprocessable_entity)
   end
 
-  def routing_error(status = :not_acceptable)
-    message = "RoutingError: All POST requests must be made at root/businesses/"
-    render json: message, status: status
-  end
+  # def routing_error(status = :not_acceptable)
+  #   message = "RoutingError: All POST requests must be made at root/businesses/"
+  #   render json: message, status: status
+  # end
 
 end

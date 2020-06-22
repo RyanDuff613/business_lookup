@@ -33,7 +33,7 @@ Now open a web browser and enter localhost:3000 in the address bar to view the p
 |GET | localhost:3000/businesses?business_type=[search_params]| All information related to business of a given type|
 |POST||Post a new business to add to database|
 |PUT/PATCH|Update the information stored for a given business|
-|DELETE||Delete the entire record for a given business|
+|DELETE|localhost:3000/business?id=[business id]|Delete the entire record for a given business|
 
 
 ## User Stories Employed to Determine Behavior Driven Development Strategy
